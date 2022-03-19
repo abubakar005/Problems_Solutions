@@ -40,18 +40,18 @@ public class BFSUndirectedGraph {
     public void BFS(int s) {
 
         Queue<Integer> queue = new LinkedList<>();
-        boolean[] visisted = new boolean[nodes];
+        boolean[] visited = new boolean[nodes];
 
         queue.offer(s);
-        visisted[s] = true;
+        visited[s] = true;
 
         while(!queue.isEmpty()) {
             int u = queue.poll();
             System.out.println(u);
             for(int v : adjacencyList[u]) {
-                if(!visisted[v]) {
+                if(!visited[v]) {
                     queue.offer(v);
-                    visisted[v] = true;
+                    visited[v] = true;
                 }
             }
         }
