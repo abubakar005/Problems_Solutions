@@ -19,6 +19,14 @@ public class Main {
 
     public static void main(String args[]){
 
+
+        String st = "{\"meterCollector\":[{\"parameter\":\"heartbeat\",\"value\":\"{\\\"modelName\\\":\\\"modelName\\\",\\\"deviceName\\\":\\\"router\\\",\\\"version\\\":\\\"version\\\",\\\"powerSource\\\":\\\"powerSource\\\",\\\"macAddress\\\":\\\"28:1c:02:20:41:98\\\",\\\"serialNumber\\\":\\\"serialNumber\\\",\\\"wwan_ip\\\":\\\"10.72.22.6\\\",\\\"time\\\":1604509280}\"}]}";
+
+        System.out.println(st);
+        st = st.replaceAll("\\\\", "");
+        System.out.println(st);
+
+
         Main main = new Main();
         System.out.println("Hello   " + main.var);
         //Math.round();

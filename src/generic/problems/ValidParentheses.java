@@ -11,6 +11,8 @@ public class ValidParentheses {
 
     public static boolean isValid(String s) {
 
+        s.split("/,");
+
         boolean result = false;
         Stack<Character> stack = new Stack<>();
         char[] array = s.toCharArray();
