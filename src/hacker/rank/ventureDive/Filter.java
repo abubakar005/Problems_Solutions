@@ -17,6 +17,13 @@ class Filter {
     }
 }
 
+class Filter1 {
+
+    public static Predicate<String> nameStartingWithPrefix(String prefix) {
+        return x -> x.startsWith(prefix);
+    }
+}
+
 class Mapper {
     public static Function<String, CharactersCount> getDistinctCharactersCount() {
         Function<String, CharactersCount> func = (String x) -> {
@@ -25,6 +32,13 @@ class Mapper {
             return cc;
         };
         return func;
+    }
+}
+
+class Mapper1 {
+
+    public static Function<String, CharactersCount> getDistinctCharactersCount() {
+        return x -> new CharactersCount(x, (int) x.chars().distinct().count());
     }
 }
 
@@ -64,8 +78,8 @@ class CharactersCount {
         );
 
         names.stream()
-                .filter(Filter.nameStartingWithPrefix(scanner.nextLine()))
-                .map(Mapper.getDistinctCharactersCount())
+                .filter(Filter1.nameStartingWithPrefix("a"))
+                .map(Mapper1.getDistinctCharactersCount())
                 .forEachOrdered(System.out::println);
     }
 }

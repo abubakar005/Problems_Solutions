@@ -8,7 +8,7 @@ public class LongestUniqueSubstring {
     public static void main(String args[]){
 
         LongestUniqueSubstring longestUniqueSubstring = new LongestUniqueSubstring();
-        int length = longestUniqueSubstring.getLongestUniqueSubstringLength("abscarfscg");
+        int length = longestUniqueSubstring.getLongestUniqueSubstringLength("abcbas");
         System.out.println("Length: " + length);
     }
 
