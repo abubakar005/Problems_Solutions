@@ -7,7 +7,7 @@ public class GiftingGroups {
 
     public static void main(String[] args) {
 
-        String given1[] = {"110", "110", "011"}; //2
+        String given1[] = {"110", "112", "011"}; //2
         String given2[] = {"1100", "1101", "0010", "0010", "0001"}; //2
         String given3[] = {"110", "111", "011"}; //1
 
@@ -19,7 +19,7 @@ public class GiftingGroups {
         String arr6[] = {"11100", "11100", "11100", "00011", "00011"};//2
         String arr7[] = {"10100", "01010", "10100", "01010", "00001"};//3
 
-        List<String> arrayList = Arrays.asList(given1);
+        List<String> arrayList = Arrays.asList(given3);
         int result = findSubscriberGroups(arrayList);
         System.out.println(result);
 
@@ -27,9 +27,10 @@ public class GiftingGroups {
 
 
     public static int findSubscriberGroups(List<String> arrayList) {
-        if (null == arrayList || arrayList.isEmpty()) {
+
+        if (null == arrayList || arrayList.isEmpty())
             return 0;
-        }
+
         int count = 0;
         int[][] isConnected = new int[arrayList.size()][arrayList.size()];
 
@@ -64,7 +65,6 @@ public class GiftingGroups {
         for (int i = 0; i < isConnected.length; i++) {
             if (isConnected[v][i] == 1 && !isReached[i])
                 alignedGroups(isConnected, isReached, i);
-
         }
 
     }

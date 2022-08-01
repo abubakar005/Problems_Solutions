@@ -14,12 +14,13 @@ public class ShipmentImbalance {
         List<Integer> weight1 = Arrays.asList(1,2,3);
         List<Integer> weight2 = Arrays.asList(1,3,2);
         List<Integer> weight3 = Arrays.asList(3,5,8,2);
-        System.out.println(getTotalImbalance2(weight2));
+        System.out.println(getTotalImbalance2(weight1));
 
         int[] nums = {1,2,3};
+        int[] nums1 = {3,2,3};
         int[] nums2 = {1,3,2};
-        int[] nums1 = {3,5,8,2};
-        amazonShipping(nums2);
+        int[] nums3 = {3,5,8,2};
+        amazonShipping(nums1);
     }
 
 

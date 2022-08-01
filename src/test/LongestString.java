@@ -1,5 +1,8 @@
 package test;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class LongestString {
 
 
@@ -8,6 +11,7 @@ public class LongestString {
         System.out.println(getStringLength("abcabcdb"));
     }
 
+    // n2 and wrong implementation
     public static int getStringLength(String input) {
 
         StringBuilder result = new StringBuilder("");
@@ -35,5 +39,29 @@ public class LongestString {
 
 
         return longestLength;
+    }
+
+    public static int longestSubstring(String str) {
+
+        int maxLength = 0;
+
+        if(str == null || str.isEmpty())
+            return maxLength;
+
+        Set<Character> set = new HashSet<>();
+
+        int start = 0;
+        int end = 0;
+
+        for(; end < str.length(); end++) {
+
+            if(set.contains(str.charAt(end))) {
+
+            }
+
+            maxLength = Math.max(maxLength, end-start+1);
+        }
+
+        return maxLength;
     }
 }
