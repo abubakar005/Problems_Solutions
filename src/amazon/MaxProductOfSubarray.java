@@ -13,7 +13,7 @@ public class MaxProductOfSubarray {
 
         int[] test = {1, -2, -3, 4};
         int[] test1 = {0, 1, -2, -3, -4};
-        int[] test2 = {1,-1,1,-1,1,-1};
+        int[] test2 = {1,-1,-1,1,1,-1};
        // int result = maxSubarrayLength(test2);
         System.out.println(getMaxLen(test2));
     }

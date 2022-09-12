@@ -5,8 +5,9 @@ public class FindMissingNumber {
     public static void main(String[] args) {
 
         int[] a = { 1, 5, 2, 3, 4, 7, 8};
+        int[] a2 = {-1, -3};
 
-        System.out.println(findDisappearedNumbers(a));
+        System.out.println(findDisappearedNumbers(a2));
     }
 
     public static int findDisappearedNumbers(int[] nums) {

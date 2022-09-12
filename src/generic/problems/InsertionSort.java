@@ -34,6 +34,7 @@ public class InsertionSort {
         }
     }
 
+    // Better approach
     private void sort2(int[] arr) {
 
         for(int i=1; i<arr.length; i++) {
