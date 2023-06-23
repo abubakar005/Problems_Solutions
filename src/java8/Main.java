@@ -29,6 +29,9 @@ public class Main {
         contactPersons.add(new PersonWithContacts("mubin", 28, Arrays.asList("2365784"), true));
         contactPersons.add(new PersonWithContacts("fakhar", 35, Arrays.asList("96214568", "0145876"), true));
 
+        // Find first element
+        System.out.println("First:  "+list.stream().findFirst().get());
+
         // find list of employees whose age is greater than 25 and less than 40
         List<Employee> collect = list.stream()
                 .filter(e -> e.getAge() > 25 && e.getAge() < 40)

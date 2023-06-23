@@ -4,6 +4,15 @@ public class Practice {
 
     public static void main(String[] args) {
 
+        List<String> javaList = Arrays.asList("aa", "bb", "xy", "ddd", "ab");
+
+        if (javaList.stream().noneMatch(l -> l.matches("aaa|xyz|abc"))) {
+            System.out.println("heloooo");
+        }
+
+        if (javaList.contains(Arrays.asList("aaa", "xyz", "abc")))
+            System.out.println("heloooo----");
+
         String str = "abcdefgh";
         int[] arr = {4, -4, 5, -1, -3, 4, -4};
         int[] test = {1, -2, 3, 4};
@@ -11,10 +20,19 @@ public class Practice {
         //test();
 
         int[] array = {1,2,3,4,5,5,5,5,6,7,8,9,9};
-        System.out.println(findNum(9, 0, array.length-1, array));
+        //System.out.println(findNum(9, 0, array.length-1, array));
+ //       System.out.println(new Practice().sumOfInteger(12345));
 
        //System.out.println(maxProduct(test));
        // System.out.println(wordBreak("leetcode", new HashSet<>(Arrays.asList("leet", "code2", "leetcode"))));
+    }
+
+    public int sumOfInteger(int val) {
+
+        if(val == 0)
+            return val;
+
+        return val%10 + sumOfInteger(val/10);
     }
 
 

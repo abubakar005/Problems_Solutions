@@ -7,6 +7,13 @@ import java.util.regex.Pattern;
 
 public class AdditionMagic {
 
+    public static void main(String args[]) {
+
+        AdditionMagic magic = new AdditionMagic();
+        String res = magic.add(1, "hello");
+        System.out.println(res);
+    }
+
     public String add(double a, String b) {
         return a + b;
     }
@@ -23,7 +30,7 @@ public class AdditionMagic {
         return a+b;
     }
 
-    public static void main(String args[] ) throws Exception {
+    public static void main1(String args[] ) throws Exception {
         // Enter your code here. Read input from STDIN. Print output to STDOUT /
         Scanner sc = new Scanner(System.in);
         String sub = sc.nextLine();
